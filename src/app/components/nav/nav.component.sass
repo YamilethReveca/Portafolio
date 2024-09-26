@@ -1,0 +1,30 @@
+
+ul
+  display: flex
+  align-items: center
+  justify-content: space-around
+  height: 30%
+  padding: 1em
+
+.irHacia
+  font-family: 'Roboto'
+  justify-content: space-around
+  display: flex
+  align-items: center
+  padding: 13px
+  font-size: 30px
+  text-align: center
+  color: white
+  font-weight: bolder
+  list-style: none
+  transition: transform 0.3s ease
+  cursor: pointer
+  border: none
+  margin-bottom: 20px
+  border: 2px solid transparent/* Border transparente inicialmente */
+
+li:hover
+  transform: translateY(-5px)
+  outline: 2px solid fuchsia /* no se mueve la car de abajo */
+  box-shadow: 0 0 10px fuchsia, 0 0 20px fuchsia
+  background-color: #4B0082
