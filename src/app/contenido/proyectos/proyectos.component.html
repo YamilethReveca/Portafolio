@@ -2,12 +2,10 @@
 <h2>Mis proyectos destacados</h2>
 
 <section class="proyectos">
-  <button
-    *ngFor="let proyecto of proyectos"
-    class="li"
-    (mouseenter)="mostrarResumen(proyecto.summary, $event)"
+  <button *ngFor="let proyecto of proyectos" class="li" (mouseenter)="mostrarResumen(proyecto, $event)"
+
     (mouseleave)="ocultarResumen()"
-  >
+    >
     <p>{{ proyecto.nombre }}</p>
     <a [href]="proyecto.enlace"><img [src]="proyecto.imagen" alt="{{ proyecto.nombre }}"></a>
   </button>

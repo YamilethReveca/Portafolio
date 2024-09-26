@@ -51,21 +51,18 @@ p
 
 .summary
   position: absolute
-  // background-color: rgba(255, 255, 255, 0.9)
-  // border: 1px solid #ccc
-  border-radius: 5px
-  padding: 10px
-  z-index: 1
-  // width: 200px
-  // box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+  top: 100% /* Posiciona el cuadro justo debajo del botón */
+  left: 50% /* Centra horizontalmente respecto al botón */
+  // transform: translateX(-50%) /* Ajusta para centrarlo */
   background-color: #4B0082
-  transition: background-color 300ms
   border: 2px solid fuchsia
   box-shadow: 0 0 10px fuchsia, 0 0 20px fuchsia
   color: white
-  width: 15%
-  height: 230px
-  display: flex
-  flex-direction: column
-  align-items: center
-  justify-content: center
+  width: 212px /* Ajusta el ancho según sea necesario */
+  padding: 10px
+  z-index: 1
+  transition: opacity 300ms /* Agrega una transición */
+  opacity: 1 /* Por defecto visible */
+
+.summary.hidden
+  opacity: 0 /* Oculto cuando no se muestra */

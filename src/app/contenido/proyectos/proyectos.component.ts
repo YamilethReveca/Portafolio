@@ -1,11 +1,11 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-proyectos',
   templateUrl: './proyectos.component.html',
   styleUrls: ['./proyectos.component.sass']
 })
-export class ProyectosComponent  {
+export class ProyectosComponent {
 
   proyectos = [
     { nombre: 'Trivia', enlace: 'https://trivia-pre-admision.vercel.app/', imagen: '../../../assets/image/trivia_1.jpg', summary: 'Juego de Trivia para aprender y divertirse, contiene 2 alternativas de juego: gastronomía y cultura general.' },
@@ -16,20 +16,23 @@ export class ProyectosComponent  {
     { nombre: 'App Burger Queen Api Client', enlace: 'https://burger-queen-api-client-self.vercel.app/', imagen: '../../../assets/image/restaurante.png', summary: 'Aplicación de restaurante que nos permite generar pedidos a la cocina y cambiar el estado cuando esté listo, también está integrado con API.' }
   ]
 
-  resumenTexto: string = '';
-  resumenVisible: boolean = false;
+  resumenVisible = false;
+  resumenTexto = '';
   resumenPos = { x: 0, y: 0 };
 
-  mostrarResumen(texto: string, event: MouseEvent) {
-    this.resumenTexto = texto;
+  mostrarResumen(proyecto: any, event: MouseEvent) {
+    this.resumenTexto = proyecto.summary;
     this.resumenVisible = true;
-    this.resumenPos.x = event.clientX;
-    this.resumenPos.y = event.clientY + 10; // un pequeño desplazamiento hacia abajo
+
+    const button = event.currentTarget as HTMLElement;
+    const rect = button.getBoundingClientRect();
+    this.resumenPos = { x: rect.left + window.scrollX, y: rect.bottom + window.scrollY };
   }
 
   ocultarResumen() {
     this.resumenVisible = false;
   }
+
 }
 
 
