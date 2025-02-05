@@ -1,0 +1,68 @@
+.proyectos
+  // width: 60%
+  height: 58%
+  margin-bottom: 50px
+  background-color: hsl(0, 0%, 90%)
+  transition: background-color 300ms
+  border: 2px solid fuchsia
+  box-shadow: 0 0 10px fuchsia, 0 0 20px fuchsia
+  padding: 20px
+  border-radius: 5px
+  display: flex
+  align-items: center
+  justify-content: center
+  // margin-left: auto
+  // margin-right: auto
+
+.li
+  width: 30%
+  height: 230px
+  list-style: none
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  margin-right: 10px
+  margin-bottom: 10px
+  background-color: #4B0082
+  transition: background-color 300ms
+  border: 2px solid fuchsia
+  box-shadow: 0 0 10px fuchsia, 0 0 20px fuchsia
+  padding: 20px
+  border-radius: 5px
+  position: relative
+  // z-index: 0
+
+img
+  width: 100%
+  height: 63px
+  border-radius: 10px
+
+p
+  text-align: center
+  margin-bottom: 5px
+  border-bottom: 3px solid black
+  border-radius: 10px 10px 0px 0px
+  font-family: 'roboto'
+  font-size: 16px
+  font-weight: bolder
+  color: white
+  transition: background-color 300ms
+
+.summary
+  position: absolute
+  top: 100% /* Posiciona el cuadro justo debajo del botón */
+  left: 50% /* Centra horizontalmente respecto al botón */
+  // transform: translateX(-50%) /* Ajusta para centrarlo */
+  background-color: #4B0082
+  border: 2px solid fuchsia
+  box-shadow: 0 0 10px fuchsia, 0 0 20px fuchsia
+  color: white
+  width: 212px /* Ajusta el ancho según sea necesario */
+  padding: 10px
+  z-index: 1
+  transition: opacity 300ms /* Agrega una transición */
+  opacity: 1 /* Por defecto visible */
+
+.summary.hidden
+  opacity: 0 /* Oculto cuando no se muestra */
