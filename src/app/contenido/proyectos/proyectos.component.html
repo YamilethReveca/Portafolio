@@ -1,5 +1,6 @@
 <h1>Proyectos</h1>
 <h2>Mis proyectos destacados</h2>
+<<<<<<< HEAD
 
 <section class="proyectos">
   <button *ngFor="let proyecto of proyectos" class="li" (mouseenter)="mostrarResumen(proyecto, $event)"
@@ -13,4 +14,35 @@
   <div class="summary" *ngIf="resumenVisible" [style.left.px]="resumenPos.x" [style.top.px]="resumenPos.y">
     {{ resumenTexto }}
   </div>
+=======
+<section class="proyectos">
+  <button class="li">
+    <p>Trivia</p>
+    <a href="https://trivia-pre-admision.vercel.app/"><img src="../../../assets/image/trivia_1.jpg"></a>
+  </button>
+  <button class="li">
+    <p>Analizador de texto</p>
+    <a href="https://yamilethreveca.github.io/DEV012-text-analyzer/"><img
+        src="../../../assets/image/proyecto_analisis-de-texto.png"></a>
+  </button>
+  <button class="li">
+    <p>DataVerse</p>
+    <a href="https://yamilethreveca.github.io/DEV012-dataverse/"><img
+        src="../../../assets/image/proyecto_pokemon-removebg-preview.png"></a>
+  </button>
+  <button class="li">
+    <p>Dataverse con IA</p>
+    <a href="https://dataverse-chat.vercel.app/"><img src="../../../assets/image/proyecto_IA.jpg"></a>
+  </button>
+  <button class="li">
+    <p>Movie changelle con Angular</p>
+    <a href="https://movie-challenge-con-framework.vercel.app/"><img src="../../../assets/image/movie.jpg"></a>
+  </button>
+  <button class="li">
+    <p>App Burger queen api Client</p>
+    <a href="https://burger-queen-api-client-self.vercel.app/"><img src="../../../assets/image/restaurante.png"></a>
+  </button>
+
+
+>>>>>>> 81aafea (arreglando portafolio)
 </section>
