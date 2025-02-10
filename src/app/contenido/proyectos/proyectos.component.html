@@ -1,0 +1,30 @@
+<!--
+
+  <section class="presentacion__contenido">
+
+    <h1 class="presentacion__contenido__titulo">
+      Proyectos</h1>
+
+
+    <div class="carrusel">
+      Botón anterior
+      <button (click)="prev()" class="btn-prev">❮</button>
+
+      Contenedor de proyectos
+      <div class="presentacion__enlaces__link">
+        <div class="tarjeta" *ngFor="let proyecto of proyectos; let i = index"
+          [ngClass]="{ 'activo': i === indiceActual }">
+          <img [src]="proyecto.imagen" [alt]="proyecto.titulo">
+          <h3 class="presentacion__contenido__titulo">{{ proyecto.titulo }}</h3>
+          <p class="presentacion__contenido__texto">{{ proyecto.descripcion }}</p>
+          <a [href]="proyecto.url" target="_blank">Ver Proyecto</a>
+        </div>
+      </div>
+
+      Botón siguiente
+      <button (click)="next()" class="btn-next">❯</button>
+    </div>
+
+  </section>
+
+ -->
