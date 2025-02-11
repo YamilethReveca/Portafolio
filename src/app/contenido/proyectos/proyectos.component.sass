@@ -1,79 +1,150 @@
 
-// .presentacion__contenido__titulo
-//   text-align: center
+
+
+/* movil frist */
+@media (min-width: 575px)
+    .carousel
+        margin: 0px 60px
+
+
+@media(min-width: 575px)
+    .carrusel
+        width: 275px
+
+
+    .carrusel a img
+        width: 250px
 
 
 
-// .carrusel
-//   display: flex
-//   width: 100%
-//   max-width: 400px
-//   margin: auto
-//   overflow: hidden
-//   align-items: center
+// table
+//medidas para la tablet
+
+@media only screen and (min-width: 576px) and (max-width: 767px)
+    .carrusel-arrow
+      top: 50%
 
 
 
-
-// .tarjeta
-//   position: absolute
-//   width: 100%
-//   max-width: 300px
-//   padding: 15px
-//   background: white
-//   border-radius: 10px
-//   text-align: center
-//   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1)
-//   opacity: 0
-//   transform: scale(0.8)
-//   transition: opacity 0.5s ease, transform 0.5s ease
-
-// .tarjeta.activo
-//   opacity: 1
-//   transform: scale(1)
-
-// .tarjeta img
-//   width: 100%
-//   border-radius: 10px
-
-// .tarjeta h3
-//   margin: 10px 0
-
-// .tarjeta a
-//   display: inline-block
-//   margin-top: 10px
-//   padding: 5px 10px
-//   background: var(--color-terciario)
-//   color: white
-//   text-decoration: none
-//   border-radius: 5px
-
-// .tarjeta a:hover
-//   background: #0056b3
-
-// .btn-prev, .btn-next
-//   position: absolute
-//   top: 50%
-//   transform: translateY(-50%)
-//   background: rgba(0, 0, 0, 0.5)
-//   color: white
-//   border: none
-//   padding: 10px
-//   font-size: 24px
-//   cursor: pointer
-//   border-radius: 50%
-
-// .btn-prev
-//   left: 10px
-// .btn-next
-//   right: 10px
-
-// .btn-prev:hover, .btn-next:hover
-//   background: rgba(0, 0, 0, 0.8)
+//medidas para computadora
+@media only screen and (min-width: 768px) and (max-width: 1200px)
 
 
-// esto no va
-  // .presentacion__enlaces__link
-//   display: flex
-//   width: 100%
-//   justify-content: center
+h4,
+small,
+a
+    margin: 0
+    padding: 0
+
+
+a
+    text-decoration: none
+
+
+h1
+  font-size: 2.25rem
+  font-family: 'Krona One', sans-serif
+  text-align: center
+  font-size: 45px
+  line-height: 38px
+  padding-bottom: 50px
+  opacity: .9
+    // text-transform: uppercase
+  font-weight: 600
+  text-align: center
+  color: #ffffff
+
+
+.carousel // contenedor padre 100% de ancho
+    width: 100%
+    margin: 0px 0px
+    margin-bottom: 39px
+
+
+.carousel-list
+    position: relative
+    display: flex
+    align-items: center
+    width: fit-content
+    height: 304px
+    padding: 10px 0px
+    margin: 0px auto
+    max-width: 90vw
+    overflow: hidden
+
+
+.carrusel-track
+    position: relative
+    top: 0px
+    left: 0px
+    display: flex
+    justify-content: center
+    transition: .5s ease-in-out
+
+
+
+.carrusel
+    position: relative
+    width: 210px
+    padding: 0 18px
+    float: left
+    box-sizing: border-box
+    display: flex
+    height: 100%
+
+
+
+.carrusel h4
+    position: absolute
+    z-index: 1
+    font-size: 22px
+    line-height: 23px
+    color: #ffffff
+    padding: 15px
+
+
+.carrusel h4 small
+    font-family: 15px
+    display: block
+
+
+.carrusel a img
+    object-fit: cover
+    height: 300px
+    width: 200px
+    border-radius: 15px
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5)
+    transition: 3s ease-in-out
+
+
+.carrusel-arrow
+    position: absolute
+    top: 70%
+    transform: translateY(-50%)
+    z-index: 4
+    width: 48px
+    height: 48px
+    border-radius: 50%
+    background-color: white
+    border: none
+    cursor: pointer
+
+
+.carrusel-arrow :focus
+    outline: 0
+
+
+.carrusel-arrow svg
+    width: 12px
+    height: 100%
+    color: rgba(0, 0, 0, 0.7)
+
+
+.carrusel-prev
+    left: 10px
+
+
+.carrusel-next
+    right: 10px
+
+
