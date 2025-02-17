@@ -1,143 +1,63 @@
 
 
-
-/* movil frist */
-@media (min-width: 575px)
-    .carousel
-        margin: 0px 60px
-
-
-@media(min-width: 575px)
-    .carrusel
-        width: 275px
+.presentacion__proyecto
+  width: 100%
+  box-sizing: border-box
+  padding: 6% 15%
 
 
-    .carrusel a img
-        width: 250px
-
-
-
-// table
-//medidas para la tablet
-
-@media only screen and (min-width: 576px) and (max-width: 767px)
-    .carrusel-arrow
-      top: 50%
-
-
-
-//medidas para computadora
-@media only screen and (min-width: 768px) and (max-width: 1200px)
-
-
-h4,
-small,
-a
-    margin: 0
-    padding: 0
-
-
-a
-    text-decoration: none
-
-
-h1
-  font-size: 2.25rem
-  font-family: 'Krona One', sans-serif
+.presentacion__contenido__titulo
   text-align: center
-  font-size: 45px
-  line-height: 38px
-  padding-bottom: 50px
-  opacity: .9
-    // text-transform: uppercase
-  font-weight: 600
-  text-align: center
-  color: #ffffff
+  margin-bottom: 37px
 
 
-.carousel // contenedor padre 100% de ancho
+.carousel
     width: 100%
-    margin: 0px 0px
+    overflow: hidden
+    position: relative
     margin-bottom: 39px
 
 
 .carousel-list
-    position: relative
     display: flex
     align-items: center
-    width: fit-content
-    height: 304px
-    padding: 10px 0px
-    margin: 0px auto
+    justify-content: center
+    width: 100%
     max-width: 90vw
     overflow: hidden
 
 
 .carrusel-track
-    position: relative
-    top: 0px
-    left: 0px
+    width: 100%
     display: flex
-    justify-content: center
-    transition: .5s ease-in-out
-
+    transition: transform 0.5s ease-in-out
 
 
 .carrusel
-    position: relative
-    width: 210px
-    padding: 0 18px
-    float: left
-    box-sizing: border-box
-    display: flex
-    height: 100%
-
-
-
-.carrusel h4
-    position: absolute
-    z-index: 1
-    font-size: 22px
-    line-height: 23px
-    color: #ffffff
-    padding: 15px
-
-
-.carrusel h4 small
-    font-family: 15px
-    display: block
-
+    flex: 0 0 auto
+    width: calc(100% / 4)
+    padding: 0px
+    box-sizing: content-box
 
 .carrusel a img
     object-fit: cover
     height: 300px
-    width: 200px
+    width: 100%
     border-radius: 15px
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5)
-    transition: 3s ease-in-out
 
 
 .carrusel-arrow
     position: absolute
-    top: 70%
+    top: 50%
     transform: translateY(-50%)
     z-index: 4
-    width: 48px
-    height: 48px
+    width: 30px
+    height: 54px
     border-radius: 50%
     background-color: white
     border: none
     cursor: pointer
-
-
-.carrusel-arrow :focus
-    outline: 0
-
-
-.carrusel-arrow svg
-    width: 12px
-    height: 100%
-    color: rgba(0, 0, 0, 0.7)
 
 
 .carrusel-prev
@@ -146,5 +66,3 @@ h1
 
 .carrusel-next
     right: 10px
-
-

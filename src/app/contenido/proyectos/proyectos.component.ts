@@ -1,11 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, AfterViewInit, ViewChild, HostListener } from '@angular/core';
 
-// interface Proyecto {
-//   titulo: string;
-//   descripcion: string;
-//   imagen: string;
-//   url: string;
-// }
 
 @Component({
   selector: 'app-proyectos',
@@ -13,81 +7,51 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./proyectos.component.sass'],
 
 })
-export class ProyectosComponent implements OnInit {
 
+export class ProyectosComponent{
 
-  // proyectos: Proyecto[] = [
+  @ViewChild('track') track!: ElementRef;
 
-  //     {
-  //       titulo: 'Trivia',
-  //       descripcion: 'Juego trivia que tiene opciones de cultura general y gastronomía',
-  //       imagen: 'assets/image/trello.png',
-  //       url: 'https://trivia-pre-admision.vercel.app/600x300?text=Trivia'
-  //     },
-  //     {
-  //       titulo: 'Text Analyzer',
-  //       descripcion: 'Contador de palabras, caracteres, suma, números y promedio de palabras',
-  //       imagen: '',
-  //       url:'https://yamilethreveca.github.io/DEV012-text-analyzer/600x300?text=Text+Analyzer'
-  //     },
-  //     {
-  //       titulo: 'DataVerse',
-  //       descripcion: 'Filtrado y organización de pokémon por elementos',
-  //       imagen:'',
-  //       url:'https://yamilethreveca.github.io/DEV012-dataverse/600x300?text=DataVerse'
-  //     },
-  //     {
-  //       titulo: 'Dataverse Chat',
-  //       descripcion: 'SPA, Filtrado de personajes de One Piece integrado con IA de OpenAI',
-  //       imagen: '',
-  //       url:'https://dataverse-chat.vercel.app/600x300?text=Dataverse+Chat'
-  //     },
-  //     {
-  //       titulo: 'Movie Challenge con Angular',
-  //       descripcion: 'Aplicación que permite ver listado de películas',
-  //       imagen: '',
-  //       url:'https://dataverse-chat.vercel.app/600x300?text=Movie+Challenge'
-  //     },
-  //     {
-  //       titulo: 'Burger Queen API Client',
-  //       descripcion: 'Aplicación diseñada para gestionar pedidos de comida',
-  //       imagen: '',
-  //       url:'https://burger-queen-api-client-self.vercel.app/600x300?text=Burger+Queen'
-  //     },
-  //     {
-  //       titulo: 'Class Cloud',
-  //       descripcion: 'Aplicación para administrar funciones administrativas de un colegio',
-  //       imagen: '',
-  //       url:'https://proyecto-no-country.vercel.app/600x300?text=Class+Cloud'
-  //     },
-  //     {
-  //       titulo: 'Calculadora',
-  //       descripcion: 'Aplicación realizada en JavaScript, es una calculadora básica',
-  //       imagen: '',
-  //       url:'https://proyecto-no-country.vercel.app/600x300?text=Calculadora'
-  //     },
-  //     {
-  //       titulo: 'Credit Card Validator',
-  //       descripcion: 'Proyecto en JavaScript que valida tarjetas con el método Luhn',
-  //       imagen: '',
-  //       url:'https://card-validation-fawn.vercel.app/600x300?text=Credit+Card+Validator'
-  //     },
-  //   ];
+  proyectos = [
+    { nombre: "Trivia Pre Admisión", link: "https://trivia-pre-admision.vercel.app/", imagen: "assets/imagen/proyecto-1.jpg" },
+    { nombre: "Text Analyzer", link: "https://yamilethreveca.github.io/DEV012-text-analyzer/", imagen: "assets/imagen/proyecto-2.png" },
+    { nombre: "Dataverse", link: "https://yamilethreveca.github.io/DEV012-dataverse/", imagen: "assets/imagen/proyecto-3.jpg" },
+    { nombre: "Dataverse Chat", link: "https://dataverse-chat.vercel.app/", imagen: "assets/imagen/proyecto-4.jpg" },
+    { nombre: "Movie Challenge", link: "https://movie-challenge-con-framework.vercel.app/", imagen: "assets/imagen/proyecto-5.jpg" },
+    { nombre: "Burger Queen", link: "https://burger-queen-api-client-self.vercel.app/", imagen: "assets/imagen/proyecto-6.jpg" },
+    { nombre: "Calculadora Personal", link: "https://calculadora-personal.vercel.app/", imagen: "assets/imagen/proyecto-7.jpg" },
+    { nombre: "Card Validation", link: "https://card-validation-fawn.vercel.app/", imagen: "assets/imagen/credit_card.png" },
+    { nombre: "No Country", link: "https://proyecto-no-country.vercel.app/", imagen: "assets/imagen/class.jpg" }
+  ];
 
+  currentIndex = 0;
+  visibleItems = 4; // Ajusta el número de elementos visibles
+  itemWidth = 0;
 
-  // indiceActual = 0;
+  ngAfterViewInit() {
+    this.updateItemWidth();
+    this.moveToIndex(0);
+  }
 
-  // prev() {
-  //   this.indiceActual = (this.indiceActual === 0) ? this.proyectos.length - 1 : this.indiceActual - 1;
-  // }
+  updateItemWidth() {
+    const trackElement = this.track.nativeElement as HTMLElement;
+    this.itemWidth = trackElement.scrollWidth / this.proyectos.length;
+  }
 
-  // next() {
-  //   this.indiceActual = (this.indiceActual === this.proyectos.length - 1) ? 0 : this.indiceActual + 1;
-  // }
-  constructor() { }
+  moveToIndex(index: number) {
+    const trackElement = this.track.nativeElement as HTMLElement;
+    const maxIndex = this.proyectos.length - this.visibleItems;
+    this.currentIndex = Math.max(0, Math.min(index, maxIndex));
+    trackElement.style.transform = `translateX(-${this.currentIndex * this.itemWidth}px)`;
+  }
 
-  ngOnInit(): void { }
+  next() {
+    this.moveToIndex(this.currentIndex + 1);
+  }
 
+  prev() {
+    this.moveToIndex(this.currentIndex - 1);
+  }
 
 }
 
