@@ -38,8 +38,6 @@ body
   justify-content: space-between
   gap: 82px
 
-
-
 .presentacion__contenido
   width: 50%
   display: flex
@@ -124,4 +122,33 @@ body
   text-decoration: none
   font-weight: bold
   display: block
+
+
+
+
+
+
+
+@media (max-width: 767px) // movil
+    /* … */
+    .header
+        padding: 10%
+
+
+    .header__menu
+        display: flex
+        justify-content: left
+        flex-direction: column
+
+
+
+    .presentacion
+        flex-direction: column-reverse
+        padding: 5%
+
+
+    .presentacion__contenido
+        width: auto
+
+
 

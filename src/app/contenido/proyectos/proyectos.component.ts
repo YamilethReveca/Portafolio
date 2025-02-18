@@ -1,4 +1,5 @@
-import { Component, ElementRef, AfterViewInit, ViewChild, HostListener } from '@angular/core';
+
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 
 @Component({
@@ -39,11 +40,11 @@ export class ProyectosComponent{
   }
 
   moveToIndex(index: number) {
-    const trackElement = this.track.nativeElement as HTMLElement;
     const maxIndex = this.proyectos.length - this.visibleItems;
     this.currentIndex = Math.max(0, Math.min(index, maxIndex));
-    trackElement.style.transform = `translateX(-${this.currentIndex * this.itemWidth}px)`;
+    this.track.nativeElement.style.transform = `translateX(-${this.currentIndex * this.itemWidth}px)`;
   }
+
 
   next() {
     this.moveToIndex(this.currentIndex + 1);
@@ -52,7 +53,13 @@ export class ProyectosComponent{
   prev() {
     this.moveToIndex(this.currentIndex - 1);
   }
+  getDotsArray(): number[] {
+    return Array.from({ length: Math.ceil(this.proyectos.length / this.visibleItems) }, (_, i) => i);
+  }
 
+  getCurrentDotIndex(): number {
+    return Math.round(this.currentIndex / this.visibleItems);
+  }
 }
 
 
