@@ -20,9 +20,9 @@ export class ProyectosComponent{
     { nombre: "Dataverse Chat", link: "https://dataverse-chat.vercel.app/", imagen: "assets/imagen/proyecto-4.jpg" },
     { nombre: "Movie Challenge", link: "https://movie-challenge-con-framework.vercel.app/", imagen: "assets/imagen/proyecto-5.jpg" },
     { nombre: "Burger Queen", link: "https://burger-queen-api-client-self.vercel.app/", imagen: "assets/imagen/proyecto-6.jpg" },
-    { nombre: "Calculadora Personal", link: "https://calculadora-personal.vercel.app/", imagen: "assets/imagen/proyecto-7.jpg" },
+    { nombre: "Calculadora", link: "https://calculadora-personal.vercel.app/", imagen: "assets/imagen/proyecto-7.jpg" },
     { nombre: "Card Validation", link: "https://card-validation-fawn.vercel.app/", imagen: "assets/imagen/credit_card.png" },
-    { nombre: "No Country", link: "https://proyecto-no-country.vercel.app/", imagen: "assets/imagen/class.jpg" }
+    { nombre: "Class Cloud", link: "https://proyecto-no-country.vercel.app/", imagen: "assets/imagen/class.jpg" }
   ];
 
   currentIndex = 0;
