@@ -1,35 +1,23 @@
-:host
-  position: absolute
-  bottom: 0
-  width: 100%
-
-
-
 .footer
   background-color: var(--color-terciario)
   padding: 24px
   text-align: center
-  color: var(--color-primario)
-  font-family: 'Montserrat', sans-serif
-  font-size: 1.5rem
-  font-weight: 400
   width: 100%
   height: 50px
   display: flex
   align-items: center
   justify-content: center
+  position: relative
+  bottom: 0
+  font-size: 1.5rem
+  font-weight: 600
+  color: var(--color-secundario)
 
-
-
-
-@media screen and (max-width: 991px)// tablets y moviles
-
-
-
-
-
-@media (max-width: 767px) // movil
-
+@media screen and (max-width: 991px) // Tablets
   .footer
-   font-size: 1.00rem
+    font-size: 1.2rem
 
+@media (max-width: 767px) // Móviles
+  .footer
+    font-size: 1rem
+    padding: 16px

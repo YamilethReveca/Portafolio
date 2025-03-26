@@ -1,14 +1,16 @@
-
 .header
   padding: 2% 0% 0% 15%
   height: 100px
+  display: flex
+  align-items: center
+  justify-content: center
 
 .header__menu
   display: flex
   gap: 80px
+  cursor: pointer
 
 .header__menu__link
-  font-family: 'Montserrat', sans-serif
   font-size: 1.5rem
   font-weight: 600
   color: var(--color-terciario)
@@ -16,35 +18,31 @@
   text-decoration: none
   transition: .3s ease
 
+  &:hover
+    transform: scale(1.03)
+    color: var(--color-secundario)
 
-.header__menu__link:hover
-  transform: scale(1.03)
-  color: var(--color-secundario)
-
-.menu-hamburguesa
-  display: none
-  background: none
-  border: none
-  font-size: 2rem
-  cursor: pointer
-
-
-
-@media screen and (max-width: 991px)// tablets y moviles
-
-
-
-@media (max-width: 767px) // movil
-
+// Tablets (hasta 991px)
+@media screen and (max-width: 991px)
   .header
-    padding: 10%
+    padding: 5%
 
   .header__menu
-    justify-content: left
-    flex-direction: column
-    gap: 5px
+    gap: 40px
 
-  .menu-hamburguesa
-    display: block
+  .header__menu__link
+    font-size: 1.2rem
 
+// Móviles (hasta 767px)
+@media (max-width: 767px)
+  .header
+    padding: 5%
 
+  .header__menu
+    // flex-direction: column
+    align-items: center
+    gap: 10px
+
+  .header__menu__link
+    font-size: 1rem
+    padding: 5px

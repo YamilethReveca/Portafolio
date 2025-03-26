@@ -1,119 +1,111 @@
-
-
 .presentacion__proyecto
   width: 100%
   box-sizing: border-box
-  padding: 0% 8%
-
+  padding: 5% 10%
+  text-align: center
 
 .presentacion__contenido__titulo
-  text-align: center
-  margin-bottom: 37px
-
+  margin-bottom: 30px
+  font-size: 2rem
 
 a
   text-decoration: none
   font-size: 1.5rem
-  font-family: 'Montserrat', sans-serif
+  font-family: var(--fuente-montserrat)
 
 .presentacion__contenido__texto
   color: var(--color-secundario)
   text-align: center
-  margin-bottom: 5px
+  margin-bottom: 10px
 
 .carousel
-    width: 100%
-    overflow: hidden
-    position: relative
-    margin-bottom: 39px
-
+  width: 100%
+  overflow: hidden
+  position: relative
+  margin-bottom: 30px
 
 .carousel-list
-    display: flex
-    align-items: center
-    justify-content: center
-    width: 100%
-    max-width: 90vw
-    overflow: hidden
-
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  max-width: 90vw
+  overflow: hidden
 
 .carrusel-track
-    width: 100%
-    display: flex
-    transition: transform 0.5s ease-in-out
-
+  width: 100%
+  display: flex
+  transition: transform 0.5s ease-in-out
+  gap: 10px
 
 .carrusel
-    flex: 0 0 auto
-    width: calc(100% / 4)
-    padding: 0px
-    box-sizing: content-box
-    margin-left: 10px
-
+  flex: 0 0 auto
+  width: calc(100% / 4)
+  box-sizing: content-box
 
 .carrusel a img
-    object-fit: cover
-    height: 300px
-    width: 100%
-    border-radius: 15px
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5)
-
-
+  object-fit: cover
+  height: 250px
+  width: 100%
+  border-radius: 15px
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5)
 
 .carrusel-arrow
-    position: absolute
-    top: 50%
-    transform: translateY(-50%)
-    z-index: 4
-    width: 30px
-    height: 54px
-    border-radius: 50%
-    background-color: white
-    border: none
-    cursor: pointer
-
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  z-index: 4
+  width: 35px
+  height: 55px
+  border-radius: 50%
+  background-color: var(--color-terciario)
+  border: none
+  cursor: pointer
 
 .carrusel-prev
-    left: 10px
-
+  left: 10px
 
 .carrusel-next
-    right: 10px
-
+  right: 10px
 
 .carousel-dots
-    display: flex
-    justify-content: center
-    margin-top: 10px
+  display: flex
+  justify-content: center
+  margin-top: 10px
 
 .dot
-    width: 10px
-    height: 10px
-    margin: 0 5px
-    background-color: #ccc
-    border-radius: 50%
-    transition: background-color 0.3s ease
+  width: 10px
+  height: 10px
+  margin: 0 5px
+  background-color: #ccc
+  border-radius: 50%
+  transition: background-color 0.3s ease
 
-    &.active
-      background-color: #333 // Color activo
+  &.active
+    background-color: #333
 
-
-
-
-
-@media screen and (max-width: 991px)// tablets y moviles
+// Responsive para Tablets (hasta 991px)**
+@media screen and (max-width: 991px)
   .carrusel
-    width: calc(100% / 2) // Muestra 2 elementos en tablets
+    width: calc(100% / 2) // Muestra 2 proyectos en tablets
 
   .presentacion__proyecto
-    padding: 7% 15%
+    padding: 5% 10%
 
-
-
-@media (max-width: 767px) // Teléfonos pequeños
   .carrusel a img
-    width: 100% // Muestra 1 solo elemento
-    height: 159px
+    height: 200px
+
+  .carrusel-arrow
+    width: 30px
+    height: 50px
+
+//Responsive para Móviles (hasta 767px)**
+@media (max-width: 767px)
+  .carrusel
+    width: 100% // Muestra solo 1 elemento
+
+  .carrusel a img
+    height: 180px
 
   .carrusel-arrow
     width: 25px
@@ -124,4 +116,4 @@ a
     height: 8px
 
   .presentacion__proyecto
-    padding: 22% 15%
+    padding: 8% 5%
