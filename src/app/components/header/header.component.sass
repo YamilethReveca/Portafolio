@@ -1,1 +1,50 @@
 
+.header
+  padding: 2% 0% 0% 15%
+  height: 100px
+
+.header__menu
+  display: flex
+  gap: 80px
+
+.header__menu__link
+  font-family: 'Montserrat', sans-serif
+  font-size: 1.5rem
+  font-weight: 600
+  color: var(--color-terciario)
+  padding: 10px
+  text-decoration: none
+  transition: .3s ease
+
+
+.header__menu__link:hover
+  transform: scale(1.03)
+  color: var(--color-secundario)
+
+.menu-hamburguesa
+  display: none
+  background: none
+  border: none
+  font-size: 2rem
+  cursor: pointer
+
+
+
+@media screen and (max-width: 991px)// tablets y moviles
+
+
+
+@media (max-width: 767px) // movil
+
+  .header
+    padding: 10%
+
+  .header__menu
+    justify-content: left
+    flex-direction: column
+    gap: 5px
+
+  .menu-hamburguesa
+    display: block
+
+

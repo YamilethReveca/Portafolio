@@ -17,10 +17,10 @@ export class ProyectosComponent{
     { nombre: "Trivia Pre Admisión", link: "https://trivia-pre-admision.vercel.app/", imagen: "assets/imagen/proyecto-1.jpg" },
     { nombre: "Text Analyzer", link: "https://yamilethreveca.github.io/DEV012-text-analyzer/", imagen: "assets/imagen/proyecto-2.png" },
     { nombre: "Dataverse", link: "https://yamilethreveca.github.io/DEV012-dataverse/", imagen: "assets/imagen/proyecto-3.jpg" },
-    { nombre: "Dataverse Chat", link: "https://dataverse-chat.vercel.app/", imagen: "assets/imagen/proyecto-4.jpg" },
+    { nombre: "Dataverse Chat", link: "https://yamilethreveca.github.io/DEV012-dataverse-chat/", imagen: "assets/imagen/proyecto-4.jpg" },
     { nombre: "Movie Challenge", link: "https://movie-challenge-con-framework.vercel.app/", imagen: "assets/imagen/proyecto-5.jpg" },
-    { nombre: "Burger Queen", link: "https://burger-queen-api-client-self.vercel.app/", imagen: "assets/imagen/proyecto-6.jpg" },
-    { nombre: "Calculadora", link: "https://calculadora-personal.vercel.app/", imagen: "assets/imagen/proyecto-7.jpg" },
+    { nombre: "Burger Queen Api client", link: "https://burger-queen-api-client-sigma.vercel.app/", imagen: "assets/imagen/proyecto-6.jpg" },
+    { nombre: "Calculadora", link: "https://desafio-7-one-henna.vercel.app/", imagen: "assets/imagen/proyecto-7.jpg" },
     { nombre: "Card Validation", link: "https://card-validation-fawn.vercel.app/", imagen: "assets/imagen/credit_card.png" },
     { nombre: "Class Cloud", link: "https://proyecto-no-country.vercel.app/", imagen: "assets/imagen/class.jpg" }
   ];

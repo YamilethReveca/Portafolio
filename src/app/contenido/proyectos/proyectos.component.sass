@@ -3,7 +3,7 @@
 .presentacion__proyecto
   width: 100%
   box-sizing: border-box
-  padding: 8% 15%
+  padding: 0% 8%
 
 
 .presentacion__contenido__titulo
@@ -19,6 +19,7 @@ a
 .presentacion__contenido__texto
   color: var(--color-secundario)
   text-align: center
+  margin-bottom: 5px
 
 .carousel
     width: 100%
@@ -110,8 +111,9 @@ a
 
 
 @media (max-width: 767px) // Teléfonos pequeños
-  .carrusel
+  .carrusel a img
     width: 100% // Muestra 1 solo elemento
+    height: 159px
 
   .carrusel-arrow
     width: 25px
@@ -120,3 +122,6 @@ a
   .dot
     width: 8px
     height: 8px
+
+  .presentacion__proyecto
+    padding: 22% 15%

@@ -5,38 +5,36 @@
   --color-secundario: #F6F6F6
   --color-terciario: #22D4FD
   --fuente-montserrat: 'Montserrat', sans-serif
-  --fuente-montserrat: 'Krona One', sans-serif
+  --fuente-krona: 'Krona One', sans-serif
 
 *
   padding: 0
   margin: 0
+  box-sizing: border-box
 
-body
+html, body
+  height: 100%
+  display: flex
+  flex-direction: column
   box-sizing: border-box
   background-color: var(--color-primario)
   color: var(--color-secundario)
 
-.header
-  padding: 2% 0% 0% 15%
 
-.header__menu
-  display: flex
-  gap: 80px
-
-.header__menu__link
-  font-family: 'Montserrat', sans-serif
-  font-size: 1.5rem
-  font-weight: 600
-  color: var(--color-terciario)
-  padding: 10px
-  text-decoration: none
+main
+  flex: 1
 
 .presentacion
-  padding: 6% 15%
+  padding: 2% 16%
   display: flex
-  align-items: center
+  flex: 1
+  // align-items: center
   justify-content: space-between
-  gap: 82px
+  // gap: 82px
+  // height: calc(100% - 200px)
+
+
+
 
 .presentacion__contenido
   width: 50%
@@ -45,12 +43,13 @@ body
   gap: 40px
 
 .presentacion__contenido__titulo
-  font-size: 2.25rem
+  // font-size: 2.25rem
   font-family: 'Krona One', sans-serif
 
 .presentacion__contenido__texto
   font-size: 1.5rem
   font-family: 'Montserrat', sans-serif
+  text-align: justify
 
 .titulo-destaque
   color: var(--color-terciario)
@@ -67,7 +66,7 @@ body
   text-align: center
   padding: 21.5px 0
   border-radius: 8px
-  font-family: 'Montserrat', sans-serif
+  font-family: var(--fuente-montserrat)
   font-size: 1.5rem
   font-weight: 600
   text-decoration: none
@@ -82,21 +81,16 @@ body
 
 .presentacion__enlaces__subtitulo
   font-family: 'Krona One', sans-serif
-  font-size: 1.5rem
-  font-weight: 400
+  // font-size: 1.5rem
+  // font-weight: 400
   text-align: center
 
-.footer
-  background-color: var(--color-terciario)
-  padding: 24px
-  text-align: center
-  color: var(--color-primario)
-  font-family: 'Montserrat', sans-serif
-  font-size: 1.5rem
-  font-weight: 400
+
+
 
 .presentacion__imagen
-  width: 50%
+  width: 20%
+  height: 20%
   border: 1px solid var(--color-terciario)
 
 .presentacion__contenido__texto a
@@ -107,11 +101,11 @@ body
 
 .presentacion__enlaces
   display: flex
-  flex-wrap: wrap
-  justify-content: space-between
+  // flex-wrap: wrap
+  // justify-content: space-between
   gap: 10px
-  max-width: 1000px
-  margin: auto
+  // max-width: 1000px
+  // margin: auto
 
 .presentacion__enlaces__link
   flex: 1 1 calc(25% - 10px)
@@ -121,48 +115,34 @@ body
   border-radius: 5px
   text-decoration: none
   font-weight: bold
-  display: block
-
-
-
-
+  // display: block
 
   // responsive
-
 
 @media screen and (max-width: 991px)// tablets y moviles
 
 
 
-
 @media (max-width: 767px) // movil
 
-  .header
-    padding: 10%
 
-
-  .header__menu
-    display: flex
-    justify-content: left
-    flex-direction: column
-
-
+  .presentacion__imagen
+    width: 30%
 
   .presentacion
     flex-direction: column-reverse
     padding: 5%
 
-
   .presentacion__contenido
-     width: auto
+    width: auto
+
+  // .presentacion__contenido__titulo
+  //   font-size: 2.00rem
 
 
+  .presentacion__enlaces__subtitulo, .presentacion__enlaces__link
+    font-size: 1.5rem
 
 
-
-
-
-
-
-
-
+  .footer
+   font-size: 1.00rem
